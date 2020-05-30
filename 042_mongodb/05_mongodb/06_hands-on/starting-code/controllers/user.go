@@ -6,15 +6,15 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/skhut/go-practice-web-dev-db/042_mongodb/06_hands-on/starting-code/models"
+	"github.com/skhut/go-practice-web-dev-db/042_mongodb/05_mongodb/06_hands-on/starting-code/models"
 	"gopkg.in/mgo.v2/bson"
 )
 
 type UserController struct {
-	sessionMap *map[string]User
+	sessionMap *map[string]models.User
 }
 
-func NewUserController(s *map[string]User) *UserController {
+func NewUserController(s *map[string]models.User) *UserController {
 	return &UserController{s}
 }
 

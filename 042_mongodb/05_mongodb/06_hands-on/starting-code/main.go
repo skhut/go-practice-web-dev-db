@@ -4,7 +4,8 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/skhut/go-practice-web-dev-db/042_mongodb/06_hands-on/starting-code/controllers"
+	"github.com/skhut/go-practice-web-dev-db/042_mongodb/05_mongodb/06_hands-on/starting-code/controllers"
+	"github.com/skhut/go-practice-web-dev-db/042_mongodb/05_mongodb/06_hands-on/starting-code/models"
 )
 
 func main() {
@@ -17,6 +18,6 @@ func main() {
 	http.ListenAndServe("localhost:8080", r)
 }
 
-func getSession() *map[string]User {
-	return make(map[string]User)
+func getSession() *map[string]models.User {
+	return &make(map[string]models.User)
 }
