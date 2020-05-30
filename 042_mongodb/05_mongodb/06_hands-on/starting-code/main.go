@@ -18,6 +18,6 @@ func main() {
 	http.ListenAndServe("localhost:8080", r)
 }
 
-func getSession() *map[string]models.User {
-	return &make(map[string]models.User)
+func getSession() map[string]models.User {
+	return make(map[string]models.User)
 }

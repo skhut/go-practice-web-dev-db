@@ -11,10 +11,10 @@ import (
 )
 
 type UserController struct {
-	sessionMap *map[string]models.User
+	sessionMap map[string]models.User
 }
 
-func NewUserController(s *map[string]models.User) *UserController {
+func NewUserController(s map[string]models.User) *UserController {
 	return &UserController{s}
 }
 
@@ -77,16 +77,13 @@ func (uc UserController) DeleteUser(w http.ResponseWriter, r *http.Request, p ht
 
 	oid := bson.ObjectIdHex(id)
 
-	// composite literal
-	u := models.User{}
-
-	u, ok := uc.sessionMap[string(oid)]
+	_, ok := uc.sessionMap[string(oid)]
 
 	if !ok {
 		w.WriteHeader(404)
 		return
 	}
-	delete(uc.sessionMap, oid)
+	delete(uc.sessionMap, string(oid))
 
 	w.WriteHeader(http.StatusOK) // 200
 	fmt.Fprint(w, "Deleted user", oid, "\n")
