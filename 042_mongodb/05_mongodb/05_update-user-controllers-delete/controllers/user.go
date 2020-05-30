@@ -48,7 +48,8 @@ func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httpr
 
 func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	u := models.User{}
-
+	fmt.Println("Initial body")
+	fmt.Println(r.Body)
 	json.NewDecoder(r.Body).Decode(&u)
 	fmt.Println(r.Body)
 	u.Id = bson.NewObjectId()
