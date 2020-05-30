@@ -43,7 +43,9 @@ if err := uc.session.DB("go_rest_tutorial").C("users").RemoveId(oid); err != nil
 Enter this at the terminal
 
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"name":"Miss Moneypenny","gender":"female","age":27}' http://localhost:8080/user
+curl -X POST -H "Content-Type: application/json" -d "{\"Name\":\"James Bond\",\"Gender\":\"male\",\"Age\":32}" http://localhost:8080/user
+
+curl -X POST -H "Content-Type: application/json" -d "{\"name\":\"Miss Moneypenny\",\"gender\":\"female\",\"age\":27}" http://localhost:8080/user
 ```
 
 ```
