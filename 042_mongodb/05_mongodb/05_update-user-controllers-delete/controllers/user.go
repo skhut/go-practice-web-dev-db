@@ -50,7 +50,7 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ ht
 	u := models.User{}
 
 	json.NewDecoder(r.Body).Decode(&u)
-	fmt.Println(u)
+	fmt.Println(r.Body)
 	u.Id = bson.NewObjectId()
 	fmt.Println(u)
 	uc.session.DB("go-web-dev-db").C("users").Insert(u)
