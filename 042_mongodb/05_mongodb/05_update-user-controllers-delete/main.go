@@ -3,11 +3,8 @@ package main
 import (
 	"net/http"
 
-	//"github.com/GoesToEleven/golang-web-dev/042_mongodb/05_mongodb/05_update-user-controllers-delete/controllers"
-	//"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/controllers"
-	//"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/controllers"
-	"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/controllers"
 	"github.com/julienschmidt/httprouter"
+	controllers "github.com/skhut/go-practice-web-dev-db/042_mongodb/05_mongodb/05_update-user-controllers-delete/controllers"
 	"gopkg.in/mgo.v2"
 )
 

@@ -5,9 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/GoesToEleven/golang-web-dev/042_mongodb/02_json/models"
-	"github.com/GoesToEleven/golang-web-dev/042_mongodb/05_mongodb/05_update-user-controllers-delete/models"
 	"github.com/julienschmidt/httprouter"
+	models "github.com/skhut/go-practice-web-dev-db/042_mongodb/05_mongodb/05_update-user-controllers-delete/models"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )
